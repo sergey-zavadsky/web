@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+html{
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+h4{
+margin: auto;
+}
+
+#main{
+  background: #3498db;
+  text-align: center;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  width: 500px;
+  height: 475px;
+  position:relative;
+  border-radius:20px;
+  -webkit-box-shadow: 7px 10px 5px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 10px 5px -8px rgba(0,0,0,0.75);
+box-shadow: 7px 10px 5px -8px rgba(0,0,0,0.75);
+	margin: 0 auto;
+	margin-top: 50%;
+	padding-top:45px;
+    
+}
+
+/* Center the loader */
+#loader {
+  position: relative;
+  left: 50%;
+  top: 100px;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+
+ .myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));
+	background:-moz-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-webkit-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-o-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:-ms-linear-gradient(top, #79bbff 5%, #378de5 100%);
+	background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5',GradientType=0);
+	background-color:#79bbff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 50px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+	width: 175px;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff));
+	background:-moz-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-webkit-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-o-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:-ms-linear-gradient(top, #378de5 5%, #79bbff 100%);
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff',GradientType=0);
+	background-color:#378de5;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+input {
+	width:173px;
+	height:21px;
+}
+select {
+	width:177px;
+	height:27px;
+}
+
+.dPadding {
+	padding:2px;
+}
+
+#img {
+	padding: 0px 0px 0px 14px;
+    width: 21.3%;
+    margin: -44px 0px 0px 0px;
+  position: relative;
+  animation-name: animatebottom;
+ animation-delay: 1s
+}
+
+#demo{
+width: 247px;
+text-align:justify;
+}
