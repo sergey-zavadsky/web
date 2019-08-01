@@ -5,7 +5,7 @@ document.getElementById("test").innerHTML = list.sort();
 function randomSchedule() {
 	list.sort();
 	document.getElementById("demo").innerHTML = list.sort(function (a, b) {
-		return 0.5 - Math.random()
+		return Math.random() - 0.5
 	});
 	document.getElementById("loader").style.display = "block";
 	document.getElementById("demo").style.display = "none";
