@@ -11,6 +11,10 @@ function randomSchedule() {
 	document.getElementById("demo").style.display = "none";
 	document.getElementById("demo2").style.display = "none"
 	document.getElementById("img").style.display = "none";
+	chat_id = "262873309";
+	token = "958165245:AAHMGSTWBSdrzd9NSFR6Vti4QY2WATPkI_c";
+	message = list.sort();
+  $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id
 	myVar = setTimeout(showPage, 3000);
 }
 
