@@ -2,20 +2,25 @@ let list = ['Катя', 'Анастасия', 'Ника', 'Настя', 'Мар�
 document.getElementById("test").innerHTML = list.sort();
 
 
+
+
 function randomSchedule() {
 	list.sort();
-	document.getElementById("demo").innerHTML = list.sort(function (a, b) {
+	const nameList = document.getElementById("demo").innerHTML = list.sort(function (a, b) {
 		return Math.random() - 0.5
 	});
 	document.getElementById("loader").style.display = "block";
 	document.getElementById("demo").style.display = "none";
 	document.getElementById("demo2").style.display = "none"
 	document.getElementById("img").style.display = "none";
-	chat_id = "262873309";
-	token = "958165245:AAHMGSTWBSdrzd9NSFR6Vti4QY2WATPkI_c";
-	message = list.sort();
-  $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id
 	myVar = setTimeout(showPage, 3000);
+	sendMessage()
+	function sendMessage(){
+	chat_id = "-1001194324830";
+	token = "958165245:AAHMGSTWBSdrzd9NSFR6Vti4QY2WATPkI_c";
+	message = "Время митингов: "+nameList;
+  $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id);
+  }
 }
 
 
