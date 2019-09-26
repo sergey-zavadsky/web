@@ -27,10 +27,6 @@ function randomSchedule() {
   
 }
 
-
-var myVar;
-
-
 function showPage() {
 	document.getElementById("loader").style.display = "none";
 	document.getElementById("myDiv").style.display = "block";
@@ -49,19 +45,15 @@ function addToList() {
 function deleteFromList() {
 	let select = document.getElementById("dynamic-select");
 	let selectedValue = select.options[select.selectedIndex].text;
-	console.log(selectedValue + " selectedValue");
 
 	var found = list.find(function (element) {
 		return element = selectedValue;
 	});
-	console.log(found + " found");
 	let index = list.indexOf(selectedValue);
-	console.log(index + " index");
 
 	if ((found = selectedValue)) {
 		list.splice(index, 1);
 	}
-	console.log(list);
 	document.getElementById("test").innerHTML = list.sort();
 	select.options[select.selectedIndex] = null;
 }
