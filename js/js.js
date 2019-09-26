@@ -19,8 +19,12 @@ function randomSchedule() {
 	chat_id = "-1001194324830";
 	token = "958165245:AAHMGSTWBSdrzd9NSFR6Vti4QY2WATPkI_c";
 	message = "Время митингов: "+nameList;
-  $.get("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id);
+  $.getJSON("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id,  function (data, textStatus, jqXHR) {  // success callback
+          const id = data.result.message_id;
+		$.getJSON("https://api.telegram.org/bot"+token+"/pinChatMessage?chat_id="+chat_id+"&message_id="+id);  
+    });
   }
+  
 }
 
 
