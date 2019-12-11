@@ -1,8 +1,4 @@
-let list = ['Анастасия', 'Галина', 'Катя', 'Ника', 'Оля', 'Сергей'];
-document.getElementById("test").innerHTML = list.sort();
-
-
-
+const list = ['Анастасия', 'Галина', 'Катя', 'Ника', 'Оля', 'Сергей'];
 
 function randomSchedule() {
 	list.sort();
@@ -20,9 +16,12 @@ function randomSchedule() {
 	token = "958165245:AAHMGSTWBSdrzd9NSFR6Vti4QY2WATPkI_c";
 	message = "Время митингов: "+nameList;
   $.getJSON("https://api.telegram.org/bot"+token+"/sendMessage?text="+message+"&chat_id="+chat_id,  function (data, textStatus, jqXHR) {  // success callback
-          const id = data.result.message_id;
-		$.getJSON("https://api.telegram.org/bot"+token+"/pinChatMessage?chat_id="+chat_id+"&message_id="+id);  
+        const id = data.result.message_id;
+		const id2 = id + 1;
+		$.getJSON("https://api.telegram.org/bot"+token+"/pinChatMessage?chat_id="+chat_id+"&message_id="+id);
+			$.getJSON("https://api.telegram.org/bot"+token+"/deleteMessage?chat_id="+chat_id+"&message_id="+id2);
     });
+
   }
   
 }
@@ -33,7 +32,7 @@ function showPage() {
 	document.getElementById("demo").style.display = "inline";
 	document.getElementById("demo2").style.display = "block";
 	document.getElementById("img").style.display = "block";
-}
+	}
 
 function addToList() {
 	fieldValue = document.getElementById('addValue').value;

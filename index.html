@@ -28,7 +28,7 @@
 <button class="myButton" onclick="removeOption()">Удалить</button>
 </div>
 <h4>Список участников</h4>
-<p id="test"></p>
+<p id="test""></p>
 <div>
 
 <button onclick="randomSchedule()" class="myButton">Кому повезёт?</button>
@@ -46,7 +46,8 @@
 <img id="img" style="display:none; position: initial;z-index: 0;" src="img/fray.png" alt="Fray">
 </div>
 <script>
-
+const lists = ['Анастасия', 'Галина', 'Катя', 'Ника', 'Оля', 'Сергей'];
+document.getElementById("test").innerHTML = lists.sort();
 </script>
 
 <p id="demo"></p>
