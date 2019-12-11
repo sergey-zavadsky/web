@@ -1,4 +1,4 @@
-let list = ['Катя', 'Анастасия', 'Ника', 'Марина', 'Оля', 'Сергей'];
+let list = ['Анастасия', 'Галина', 'Катя', 'Ника', 'Оля', 'Сергей'];
 document.getElementById("test").innerHTML = list.sort();
 
 
