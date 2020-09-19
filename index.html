@@ -1,56 +1,63 @@
 ﻿<!DOCTYPE html>
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/main.css">
-<script src="js/js.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
-</head>
-<html>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h2>MyD schedule</h2>
+      <div>
+        <input
+          type="text"
+          placeholder="Добавить в список"
+          name="Добавить"
+          id="addValue"
+        />
+        <button class="myButton" onclick="addOption()">Добавить</button>
+      </div>
 
-<div id="main">
-<h2>MyD schedule</h2>
-<div>				<input type="text" placeholder="Добавить в список" name="Добавить" id="addValue">
-					 <button class="myButton" onclick="addOption()">Добавить</button>	
-</div>
+      <div class="dPadding">
+        <select id="dynamic-select">
+          <option disabled value="-1">Выбрать из списка</option>
+          <option selected value="1">Анастасия</option>
+          <option value="2">Галина</option>
+          <option value="3">Катя</option>
+          <option value="4">Ника</option>
+          <option value="5">Оля</option>
+          <option value="6">Сергей</option>
+        </select>
+        <button class="myButton" onclick="removeOption()">Удалить</button>
+      </div>
+      <h4>Список участников</h4>
+      <p id="test"></p>
+      <div>
+        <button onclick="randomSchedule()" class="myButton">
+          Кому повезёт?
+        </button>
+      </div>
 
-<div class="dPadding">
-<select id="dynamic-select">
-    <option disabled value = "-1">Выбрать из списка</option>
-	<option   selected value="1">Анастасия</option>
-	<option   value="2">Галина</option>
-	<option   value="3">Катя</option>
-	<option   value="4">Ника</option>
-	<option   value="5">Оля</option>
-	<option   value="6">Сергей</option>
+      <div id="loader" style="display: none"></div>
 
-</select>
-<button class="myButton" onclick="removeOption()">Удалить</button>
-</div>
-<h4>Список участников</h4>
-<p id="test""></p>
-<div>
+      <div style="display: none" id="myDiv" class="animate-bottom">
+        <h2 id="demo2" style="display: none">Та-да!</h2>
 
-<button onclick="randomSchedule()" class="myButton">Кому повезёт?</button>
-</div>
-
-<div id="loader" style="display:none"></div>
-
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  
-  <h2 id="demo2" style="display:none">Та-да!</h2>
-  
-<p id="demo" style="display:none"></p>
-
-</div>
-<img id="img" style="display:none; position: initial;z-index: 0;" src="img/fray.png" alt="Fray">
-</div>
-<script>
-const lists = ['Анастасия', 'Галина', 'Катя', 'Ника', 'Оля', 'Сергей'];
-document.getElementById("test").innerHTML = lists.sort();
-</script>
-
-<p id="demo"></p>
-</body>
+        <p id="demo" style="display: none"></p>
+      </div>
+      <img
+        id="img"
+        style="display: none; position: initial; z-index: 0"
+        src="img/fray.png"
+        alt="Fray"
+      />
+    </div>
+    <script>
+      const lists = ["Анастасия", "Галина", "Катя", "Ника", "Оля", "Сергей"];
+      document.getElementById("test").innerHTML = lists.sort();
+    </script>
+    <script src="js/js.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+    <p id="demo"></p>
+  </body>
 </html>
-
